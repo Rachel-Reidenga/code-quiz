@@ -33,20 +33,19 @@ Shout out to Tanetta J, Monica H and Paul C
 
 [stackoverflow](https://stackoverflow.com/)
 
-[BULLDOGJOB.com] (https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+[BULLDOGJOB.com](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
-[code.visualstudio.com] (https://code.visualstudio.com/docs/languages/markdown)
+[code.visualstudio.com](https://code.visualstudio.com/docs/languages/markdown)
 
 ## Created with:
 HTML, CSS, JavaScript
 
 
 ### Quiz Rules
-Coding Quiz Challenge
+
 Try to answer the following code-related questions within the time limit.
 Keep in mind that incorrect answers will penalize your time/score by ten seconds!
 
-Start Quiz
 
 ### Quiz Questions
 
