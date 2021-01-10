@@ -38,15 +38,16 @@ var quiz = document.querySelector("#quiz");
 var question = [];
 var questionNumber = document.querySelector("#questionNumber");
 var questionText = document.querySelector("#questionText");
+var currentQuestion =0;
 
 // Answer List
-var answer1 = document.querySelector("answer1");
-var answer2 = document.querySelector("answer2");
-var answer3 = document.querySelector("answer3");
-var answer4 = document.querySelector("answer4");
+// var answer1 = document.querySelector("answer1");
+// var answer2 = document.querySelector("answer2");
+// var answer3 = document.querySelector("answer3");
+// var answer4 = document.querySelector("answer4");
 
 // Answers Correct!/Wrong! 
-// var correct_answer = document.querySelector("#correct_answer");
+var correctAnswer = 0;
 // var next_question = document.querySelector("#next_question");
 
 // Results Time/Score
@@ -58,6 +59,7 @@ var submit = document.querySelector("#submit");
 var answerList = document.querySelector("#answerList");
 
 var quizTimer = 60
+var tempTime;
 
 var index = 0;
 var actual_time = document.querySelector("#actual_time");
@@ -67,15 +69,16 @@ var interval = 0;
 var timeScore = 0;
 
 // Store Total Time/Score Points
-var userScore = undefined; 
+var userScore = 0; 
 
 // Click "Start Quiz" Button
 startButton.addEventListener("click", ()=>{
     startButton.style.display = "none";
     // guide.style.display = "block";
-    quizTimer = setInterval(updateTimer, 1000);
+    tempTimer = setInterval(updateTimer, 1000);
     actual_time.textContent = quizTimer
     showQuestions();
+    clickAnswer();
 });
 
 function updateTimer() {
@@ -84,15 +87,16 @@ function updateTimer() {
 }
 
 function showQuestions() {
-    var currentQuestion = questions[index];
+    currentQuestion = questions[index];
     questionText.textContent = currentQuestion.question;
+    answerList.innerHTML = ""
 
     currentQuestion.choices.forEach(function(choice, i){
         var choiceButton = document.createElement("button");
         choiceButton.setAttribute("class", "choice");
-        choiceButton.setAttribute("value", "choice");
+        choiceButton.setAttribute("value", choice);
         choiceButton.textContent = i + 1 + " " + choice
-        choiceButton.onclick;
+        choiceButton.onclick = clickAnswer
         answerList.appendChild(choiceButton)
     })
 }
@@ -104,10 +108,7 @@ function showQuestions() {
 // var loadData = ()=>{
 //     questionNumber.innerHTML = index + 10 + ". ";
 //     questionText.innerHTML = questions[index].question;
-//     choice1.innerHTML = questions[index].answer1;
-//     choice2.innerHTML = questions[index].answer2;
-//     choice3.innerHTML = questions[index].answer3;
-//     choice4.innerHTML = questions[index].answer4;
+//     choices.innerHTML = questions[index].answer;
 
 //     // Timer Start
 //     timer = 0;
@@ -115,31 +116,27 @@ function showQuestions() {
 
 // loadData();
 
-
-// questions.forEach( (choices) => {
-//     choices.addEventListener("click", ()=> {
-//         choices.answerList.add("active");
-//         //check answer
-//         if(questionNumber === questions[index].answer)
-//         {
-//             correctAnswer++;
-//         }
-//         else {
-//             correctAnswer += 0;
-//         }
-//         // stop counter
-//         clearInterval(interval);
-
-//         // User select
-//         for (i = 0; i <= 3; i++)
-//         {
-//             questions[i].answerList.add("");
-//         }
-//     })
-// });
+function clickAnswer() {
+    if(this.value === questions[index].answer)
+        {
+            console.log(this.value);
+            console.log(questions[index].answer);
+            correctAnswer++;
+            score.textContent = correctAnswer
+            // currentQuestion++;
+    
+        }
+        else {
+            correctAnswer += 0;
+            quizTimer -= 10;
+            // currentQuestion++;
+        
+        }
+      index++; 
+      showQuestions(); 
+}
 
 // Score of 0 to start
-var score = 0;
 
 // Loop over questions object
 // for (var i =0; i < questions.length; i++) {
