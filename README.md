@@ -1,5 +1,55 @@
 # code-quiz
 
+# Coding Quiz Challenge
+
+## About the project:
+A timed quiz on JavaScript fundamentals that stores high scores.
+
+## Deployment
+
+Link to [Protfolio](https://)
+
+Link to code on [GitHub](https://)
+
+Link to repository on [GitHub](https://)
+
+## Screenshots
+
+![Top of Page](./screenshots/)
+
+![Middle of Page](./screenshots/)
+
+![Bottom of Page](./screenshots/)
+
+## Built With
+
+Shout out to Tanetta J, Monica H and Paul C
+
+## Acknowledgments
+
+[css-tricks.com](https://css-tricks.com/)
+
+[w3schools.com](https://www.w3schools.com/)
+
+[stackoverflow](https://stackoverflow.com/)
+
+[BULLDOGJOB.com] (https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+[code.visualstudio.com] (https://code.visualstudio.com/docs/languages/markdown)
+
+## Created with:
+HTML, CSS, JavaScript
+
+
+### Quiz Rules
+Coding Quiz Challenge
+Try to answer the following code-related questions within the time limit.
+Keep in mind that incorrect answers will penalize your time/score by ten seconds!
+
+Start Quiz
+
+### Quiz Questions
+
 Coding Quiz Challenge
 Try to answer the following code-related questions within the time limit.
 Keep in mind that incorrect answers will penalize your time/score by ten seconds!
