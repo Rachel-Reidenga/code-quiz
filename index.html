@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <!--Quiz Rules-->
+        <div id="rules">
+            <h2>Quiz Rules for Coding Quiz Challenge</h2>
+            <h3>Try to answer the following code-related questions within the time limit.</h3>
+            <h3>Keep in mind that incorrect answers will penalize your time/score by ten seconds!</h3>
+            <div id="button">
+                <button id="start">Start Quiz</button>
+            </div>
+        </div>
+
+        <!--Quiz-->
+        <div id="quiz">
+            <div id="quiz_title">
+                <h4>Code Quiz</h4>
+                <div id="timer">
+                    <h5>Time/Score:</h5>
+                    <h5 id="actual_time">00</h5>
+                </div>
+            </div>
+        </div>
+        <!--Questions-->
+        <div id="question">
+            <h2 id="questionNumber">1.</h2>
+            <h2 id="questionText">Commonly used data types DO NOT include:</h2>
+        </div>
+
+        <!-- Quiz Answer List -->
+        <div id="answerList">
+            <h4 class="answer_list" id="answer1">1. strings</h4>
+            <h4 class="answer_list" id="answer2">2. booleans</h4>
+            <h4 class="answer_list" id="answer3">3. alerts</h4>
+            <h4 class="answer_list" id="answer4">4. numbers</h4>
+        </div>
+
+        <!-- Answers Correct!/Wrong! Section
+        <div id="answersSection">
+            <h3 id="correct_answer">Correct!</h3>
+            <h3 id="next_question">Next</h3>
+        </div> -->
+
+        <!-- Results- Time/Score -->
+        <div id="result">
+            <h6>All Done!</h6>
+            <h6 id="score">Your Final Score is:</h6>
+            <button id="submit">Submit</button>
+        </div>
+
+        <!-- High Scores List-->
+        <div id="scores_list">
+            <h6>High Scores:</h6>
+            <button id="back">Go Back</button>
+            <button id="clear">Clear High Scores</button>
+        </div>
+    
+
+    </div>
+    <script src="./assets/js/script.js"></script>
+    
+</body>
+</html>
