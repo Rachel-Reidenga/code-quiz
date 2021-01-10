@@ -1,10 +1,38 @@
+// Array of questions
+var questions = [
+    { question: "Commonly used data types DO NOT include:", 
+    choices: ["strings", "booleans", "alerts", "numbers"],
+    answer: "alerts"
+},
+
+{ question: "The condition in an if/else statment is enclosed with...", 
+choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
+answer: "curly brackets"
+},
+
+{ question: "Arrays in JavaScript can be used to store...", 
+choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+answer:  "all of the above"
+},
+
+{ question: "String values must be enclosed within ____ when being assigned to variables.", 
+choices: ["commas", "curly brackets", "quotes", "parenthesis"],
+answer: "quotes"
+},
+
+{ question: "A very useful tool used during development and debugging for printing content to the debugger is:", 
+choices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
+answer: "console.log"
+},
+];
+
 // Start/Rules of Coding Quiz
 var startButton = document.querySelector("#start")
 var rules = document.querySelector("#rules");
 
 // Quiz 
 var quiz = document.querySelector("#quiz");
-var timer = document.querySelector("#timer");
+// var timer = document.querySelector("#timer");
 
 // Questions
 var question = [];
@@ -28,10 +56,11 @@ var submit = document.querySelector("#submit");
 
 // Answer List
 var answerList = document.querySelector("#answerList");
-var answer_list = document.querySelector(".answer_list")
+
+var quizTimer = 60
 
 var index = 0;
-var actual_time = 0;
+var actual_time = document.querySelector("#actual_time");
 var interval = 0;
 
 // Final Score
@@ -44,64 +73,32 @@ var userScore = undefined;
 startButton.addEventListener("click", ()=>{
     startButton.style.display = "none";
     // guide.style.display = "block";
+    quizTimer = setInterval(updateTimer, 1000);
+    actual_time.textContent = quizTimer
+    showQuestions();
 });
 
-// Timer
-var timer = ()=> {
-    if(actual_time === 60)
-{
-    clearInterval(interval);
+function updateTimer() {
+    quizTimer -- ;
+    actual_time.textContent = quizTimer;
 }
-else {
-    actual_time++;
-    timer.innerHTML = timer;
+
+function showQuestions() {
+    var currentQuestion = questions[index];
+    questionText.textContent = currentQuestion.question;
+
+    currentQuestion.choices.forEach(function(choice, i){
+        var choiceButton = document.createElement("button");
+        choiceButton.setAttribute("class", "choice");
+        choiceButton.setAttribute("value", "choice");
+        choiceButton.textContent = i + 1 + " " + choice
+        choiceButton.onclick;
+        answerList.appendChild(choiceButton)
+    })
 }
-}
-// setInterval(timer, 3000)
 
 
-// Array of questions
-var questions = [
-    { question: "Commonly used data types DO NOT include:", 
-    choice1: "1. strings",
-    choice2: "2. booleans",
-    choice3: "3. alerts",
-    choice4: "4. numbers",
-    answer: 3
-},
 
-{ question: "The condition in an if/else statment is enclosed with...", 
-choice1: "1. quotes",
-choice2: "2. curly brackets",
-choice3: "3. parenthesis",
-choice4: "4. square brackets",
-answer: 2
-},
-
-{ question: "Arrays in JavaScript can be used to store...", 
-choice1: "1. numbers and strings",
-choice2: "2. other arrays",
-choice3: "3. booleans",
-choice4: "4. all of the above",
-answer:  4
-},
-
-{ question: "String values must be enclosed within ____ when being assigned to variables.", 
-choice1: "1. commas",
-choice2: "2. curly brackets",
-choice3: "3. quotes",
-choice4: "4. parenthesis",
-answer: 3
-},
-
-{ question: "A very useful tool used during development and debugging for printing content to the debugger is:", 
-choice1: "1. JavaScript",
-choice2: "2. terminal/bash",
-choice3: "3. for loops",
-choice4: "4. console.log",
-answer: 4
-},
-];
 
 //setInterval (timer, 1000)
 // var loadData = ()=>{
@@ -119,27 +116,27 @@ answer: 4
 // loadData();
 
 
-answer_list.forEach( (choices, questionNumber) => {
-    choices.addEventListener("click", ()=> {
-        choices.answerList.add("active");
-        //check answer
-        if(questionNumber === questions[index].answer)
-        {
-            correctAnswer++;
-        }
-        else {
-            correctAnswer += 0;
-        }
-        // stop counter
-        clearInterval(interval);
+// questions.forEach( (choices) => {
+//     choices.addEventListener("click", ()=> {
+//         choices.answerList.add("active");
+//         //check answer
+//         if(questionNumber === questions[index].answer)
+//         {
+//             correctAnswer++;
+//         }
+//         else {
+//             correctAnswer += 0;
+//         }
+//         // stop counter
+//         clearInterval(interval);
 
-        // User select
-        for (i = 0; i <= 3; i++)
-        {
-            answer_list[i].answerList.add("");
-        }
-    })
-});
+//         // User select
+//         for (i = 0; i <= 3; i++)
+//         {
+//             questions[i].answerList.add("");
+//         }
+//     })
+// });
 
 // Score of 0 to start
 var score = 0;
