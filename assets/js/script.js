@@ -124,14 +124,13 @@ function clickAnswer() {
             correctAnswer++;
             score.textContent = correctAnswer
             // currentQuestion++;
-    
         }
         else {
             correctAnswer += 0;
             quizTimer -= 10;
             // currentQuestion++;
-        
         }
+    
       index++; 
       showQuestions(); 
 }
