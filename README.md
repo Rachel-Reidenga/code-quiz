@@ -1,5 +1,3 @@
-# code-quiz
-
 # Coding Quiz Challenge
 
 ## About the project:
