@@ -68,6 +68,7 @@ var interval = 0;
 // Final Score
 var timeScore = 0;
 
+
 // Store Total Time/Score Points
 var userScore = 0; 
 
@@ -82,7 +83,13 @@ startButton.addEventListener("click", ()=>{
 });
 
 function updateTimer() {
-    quizTimer -- ;
+    if(quizTimer <= 0) {
+        clearInterval(tempTimer);
+    }
+    else{
+        quizTimer -- ;
+    }
+    
     actual_time.textContent = quizTimer;
 }
 
@@ -101,9 +108,6 @@ function showQuestions() {
     })
 }
 
-
-
-
 //setInterval (timer, 1000)
 // var loadData = ()=>{
 //     questionNumber.innerHTML = index + 10 + ". ";
@@ -117,9 +121,10 @@ function showQuestions() {
 // loadData();
 
 function clickAnswer() {
+    console.log(this.value);
     if(this.value === questions[index].answer)
         {
-            console.log(this.value);
+            
             console.log(questions[index].answer);
             correctAnswer++;
             score.textContent = correctAnswer
@@ -127,30 +132,17 @@ function clickAnswer() {
         }
         else {
             correctAnswer += 0;
-            quizTimer -= 10;
+            if (quizTimer >= 10) {	
+                quizTimer -= 10;} 
+                else {	quizTimer = 0;}
             // currentQuestion++;
-        }
+        
+        };
     
       index++; 
       showQuestions(); 
 }
 
-// Score of 0 to start
-
-// Loop over questions object
-// for (var i =0; i < questions.length; i++) {
-//     var correctAnswer = confirm(questions[i].question);
-
-//     // Check answers
-//     if (
-//         (correctAnswer === 3. alerts)
-//     )
-
-// }
-
-
-
-// Increase score
 
 // Alert user
 
