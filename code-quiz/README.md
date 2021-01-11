@@ -1,5 +1,3 @@
-# code-quiz
-
 # Coding Quiz Challenge
 
 ## About the project:
@@ -7,7 +5,7 @@ A timed quiz on JavaScript fundamentals that stores high scores.
 
 ## Deployment
 
-Link to [Protfolio](https://)
+Link to [Code-Quiz](https://)
 
 Link to code on [GitHub](https://)
 
@@ -23,7 +21,7 @@ Link to repository on [GitHub](https://)
 
 ## Built With
 
-Shout out to Tanetta J, Monica H and Paul C
+Shout out to Tanetta J, Monica H, Paul C & Jess B
 
 ## Acknowledgments
 
