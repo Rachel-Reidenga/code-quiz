@@ -13,11 +13,9 @@ Link to repository on [GitHub](https://github.com/Rachel-Reidenga/code-quiz)
 
 ## Screenshots
 
-![Top of Page](./screenshots/)
+![Top of Page](./code-quiz/assets/screenshots/SS1)
 
-![Middle of Page](./screenshots/)
-
-![Bottom of Page](./screenshots/)
+![Middle of Page](./code-quiz/assets/screenshots/SS2)
 
 ## Built With
 
