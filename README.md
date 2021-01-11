@@ -13,6 +13,8 @@ Link to repository on [GitHub](https://github.com/Rachel-Reidenga/code-quiz)
 
 ## Screenshots
 
+
+
 ![Top of Page](./code-quiz/assets/screenshots/SS1)
 
 ![Middle of Page](./code-quiz/assets/screenshots/SS2)
