@@ -42,7 +42,6 @@ var currentQuestion =0;
 
 // Answers Correct!/Wrong! 
 var correctAnswer = 0;
-// var next_question = document.querySelector("#next_question");
 
 // Results Time/Score
 var result = document.querySelector("#result");
@@ -69,7 +68,6 @@ var userScore = 0;
 // Click "Start Quiz" Button
 startButton.addEventListener("click", ()=>{
     startButton.style.display = "none";
-    // guide.style.display = "block";
     tempTimer = setInterval(updateTimer, 1000);
     actual_time.textContent = quizTimer
     showQuestions();
@@ -110,21 +108,16 @@ function clickAnswer() {
             console.log(questions[index].answer);
             correctAnswer++;
             score.textContent = correctAnswer
-            // currentQuestion++;
+          
         }
         else {
             correctAnswer += 0;
             if (quizTimer >= 10) {	
                 quizTimer -= 10;} 
-                else {	quizTimer = 0;}
-            // currentQuestion++;
+                else {	quizTimer = 0;
         
         };
     
       index++; 
       showQuestions(); 
 }
-
-// Alert user
-
-// Show final score
