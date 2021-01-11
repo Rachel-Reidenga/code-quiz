@@ -125,6 +125,4 @@ function clickAnswer() {
       showQuestions(); 
 }
 
-// Alert user
-
 // Show final score
