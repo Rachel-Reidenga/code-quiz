@@ -34,11 +34,11 @@ body {
     /* display: none; */
 }
 
-/* #start:hover {
+#start:hover {
     background: lightskyblue;
     color: whitesmoke;
 
-} */
+}
 
 /* Rules */
 
@@ -187,7 +187,7 @@ body {
     top: 160px;
 }
 
-#answerList h4 {
+/* #answerList h4 {
     height: 50px;
     width: 535px;
     background: lightskyblue;
@@ -200,7 +200,7 @@ body {
     overflow: hidden;
     border: 1px solid lightskyblue;
     cursor: pointer;
-}
+} */
 
 #answerList h4:hover {
     background: rgb(23, 133, 202);

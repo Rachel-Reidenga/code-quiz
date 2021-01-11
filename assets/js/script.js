@@ -40,12 +40,6 @@ var questionNumber = document.querySelector("#questionNumber");
 var questionText = document.querySelector("#questionText");
 var currentQuestion =0;
 
-// Answer List
-// var answer1 = document.querySelector("answer1");
-// var answer2 = document.querySelector("answer2");
-// var answer3 = document.querySelector("answer3");
-// var answer4 = document.querySelector("answer4");
-
 // Answers Correct!/Wrong! 
 var correctAnswer = 0;
 // var next_question = document.querySelector("#next_question");
@@ -108,18 +102,6 @@ function showQuestions() {
     })
 }
 
-//setInterval (timer, 1000)
-// var loadData = ()=>{
-//     questionNumber.innerHTML = index + 10 + ". ";
-//     questionText.innerHTML = questions[index].question;
-//     choices.innerHTML = questions[index].answer;
-
-//     // Timer Start
-//     timer = 0;
-// }
-
-// loadData();
-
 function clickAnswer() {
     console.log(this.value);
     if(this.value === questions[index].answer)
@@ -142,7 +124,6 @@ function clickAnswer() {
       index++; 
       showQuestions(); 
 }
-
 
 // Alert user
 
