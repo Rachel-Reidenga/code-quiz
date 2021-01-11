@@ -7,7 +7,7 @@ A timed quiz on JavaScript fundamentals that stores high scores.
 
 Link to [code-quiz](https://)
 
-Link to code on [GitHub](https://)
+Link to code on [GitHub](https://github.com/Rachel-Reidenga/code-quiz/blob/Rachel-Reidenga.github.io/script.js)
 
 Link to repository on [GitHub](https://github.com/Rachel-Reidenga/code-quiz)
 
