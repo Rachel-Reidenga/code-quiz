@@ -5,11 +5,11 @@ A timed quiz on JavaScript fundamentals that stores high scores.
 
 ## Deployment
 
-Link to [Code-Quiz](https://)
+Link to [Code Quiz](https://rachel-reidenga.github.io/code-quiz/)
 
 Link to code on [GitHub](https://github.com/Rachel-Reidenga/code-quiz/blob/master/js/script.js)
 
-Link to repository on [GitHub](https://github.com/Rachel-Reidenga/code-quiz)
+Link to repository on [GitHub](https://github.com/Rachel-Reidenga/code-quiz/tree/master)
 
 ## Screenshots
 
